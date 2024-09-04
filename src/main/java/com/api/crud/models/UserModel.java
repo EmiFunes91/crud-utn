@@ -22,6 +22,9 @@ public class UserModel {
     @Column
     private String email;
 
+    @Column
+    private Integer priority;  // Agregar el campo priority
+
     public Long getId() {
         return id;
     }
@@ -61,5 +64,14 @@ public class UserModel {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public Integer getPriority() {  // Agregar el método getter para priority
+        return priority;
+    }
+
+    public void setPriority(Integer priority) {  // Agregar el método setter para priority
+        this.priority = priority;
+    }
 }
+
 

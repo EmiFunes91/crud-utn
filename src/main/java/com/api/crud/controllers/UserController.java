@@ -2,7 +2,6 @@ package com.api.crud.controllers;
 
 import com.api.crud.models.UserModel;
 import com.api.crud.services.UserService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
@@ -16,7 +15,7 @@ public class UserController {
     private UserService userService;
 
     @GetMapping
-    public ArrayList<UserModel> getUsers() {
+    public ArrayList<UserModel> getUser() {
         return this.userService.getUser();
     }
 
@@ -26,12 +25,12 @@ public class UserController {
     }
 
     @GetMapping(path = "/{id}")
-    public Optional<UserModel> getUserById(@PathVariable Long id) {
+    public Optional<UserModel> getUserById(@PathVariable("id") Long id) {
         return this.userService.getById(id);
     }
 
     @PutMapping(path = "/{id}")
-    public UserModel updateUserById(@RequestBody UserModel request,@PathVariable("id") Long id) {
+    public UserModel updateUserById(@RequestBody UserModel request, @PathVariable Long id) {
         return this.userService.updateById(request, id);
     }
 
@@ -39,10 +38,11 @@ public class UserController {
     public String deleteById(@PathVariable("id") Long id) {
         boolean ok = this.userService.deleteUser(id);
 
-        if(ok) {
-            return "User with id " + id + " deleted!";
+        if (ok) {
+            return "El usuario de clave " + id + " se ha eliminado correctamente!";
         } else {
-            return "Error, we have a problem and can't delete user with id " + id;
+            return "Error, no se ha podido eliminar el registro con clave " + id;
         }
     }
 }
+
