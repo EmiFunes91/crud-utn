@@ -1,44 +1,42 @@
-API de Gestión de Productos
+Proyecto de Gestión de Usuarios
 
 📄 Sobre Este Proyecto
 
-Esta API fue desarrollada para facilitar la administración de una tienda virtual, ofreciendo operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre productos, categorías y usuarios. La API está pensada para ser la columna vertebral de una plataforma de e-commerce, permitiendo a los administradores gestionar la tienda de manera eficiente. Además, se implementó un sistema de autenticación y autorización para asegurar que solo los usuarios autorizados puedan acceder y modificar los datos sensibles. La API cuenta con endpoints bien definidos y documentados, facilitando la integración con frontend y otras aplicaciones.
+Este proyecto de gestión de usuarios fue desarrollado para proporcionar una solución completa y segura para la administración de usuarios en aplicaciones empresariales. Utilizando Java, Spring Boot y MySQL, se implementaron funcionalidades avanzadas como el registro, inicio de sesión y gestión de roles y permisos. La aplicación permite a los administradores crear, actualizar, eliminar y gestionar usuarios con diferentes niveles de acceso, asegurando que cada usuario tenga los permisos adecuados. El proyecto está diseñado con un enfoque modular, facilitando la integración con otros sistemas y la expansión de funcionalidades.
 
 
 🔧 Tecnologías Utilizadas
 
 ● Lenguaje: Java
 
-● Framework: Spring Boot
-
-● Motor de Plantillas: Thymeleaf
+● Framework: Spring Boot, Spring Security
 
 ● Base de Datos: MySQL
 
-● Autenticación: Spring Security
+● Autenticación y Autorización: Spring Security, JWT
 
 ● Manejo de Dependencias: Maven
+
+● Despliegue: Docker
 
 
 🚀 Características
 
-● CRUD completo de productos, categorías y usuarios.
+● CRUD completo para la gestión de usuarios, incluyendo creación, actualización, eliminación y búsqueda.
 
-● Autenticación y autorización con roles personalizados.
+● Sistema de autenticación y autorización basado en roles con Spring Security y JWT.
 
-● Integración con base de datos MySQL para persistencia de datos.
+● Validación y gestión de permisos para garantizar la seguridad en el acceso a recursos.
 
-● Interfaz administrativa utilizando Thymeleaf.
+● Integración con MySQL para persistencia de datos y consultas optimizadas.
 
-● Validación de datos y manejo de excepciones global.
-
-● Documentación de la API con Swagger para facilitar la integración.
+● Diseño modular y escalable, preparado para futuras integraciones con otras aplicaciones.
 
 
 📈 Próximos Pasos
 
-● Implementar paginación y filtrado avanzado de productos.
+● Implementar recuperación de contraseña y gestión de sesiones.
 
-● Agregar funcionalidades de búsqueda de productos.
+● Agregar funcionalidades de auditoría para registrar acciones de los usuarios.
 
-● Mejorar la seguridad con OAuth2 y JWT.
+● Mejorar la interfaz de usuario con un frontend independiente para facilitar la administración.
